@@ -660,31 +660,31 @@ public class SlidingWindowBlock extends HorizontalDirectionalBlock
         // RenderShape.ENTITYBLOCK_ANIMATED;
     }
 
-static {
-    NORTH_OPEN_UP = Block.box(0, 15, 15.9, 16, 31, 18.9);
-    NORTH_OPEN_DOWN = Block.box(0, -15, 15.9, 16, 1, 18.9);
-    NORTH_OPEN_LEFT = Block.box(15, 0, 15.9, 31, 16, 18.9);
-    NORTH_OPEN_RIGHT = Block.box(-15, 0, 15.9, 1, 16, 18.9);
-    NORTH_CLOSED = Block.box(0, 0, 13, 16, 16, 16);
+    static {
+        NORTH_OPEN_UP = Block.box(0, 15, 15.9, 16, 31, 18.9);
+        NORTH_OPEN_DOWN = Block.box(0, -15, 15.9, 16, 1, 18.9);
+        NORTH_OPEN_LEFT = Block.box(15, 0, 15.9, 31, 16, 18.9);
+        NORTH_OPEN_RIGHT = Block.box(-15, 0, 15.9, 1, 16, 18.9);
+        NORTH_CLOSED = Block.box(0, 0, 13, 16, 16, 16);
 
-    SOUTH_OPEN_UP = Block.box(0, 15, -2.9, 16, 31, 0.1);
-    SOUTH_OPEN_DOWN = Block.box(0, -15, -2.9, 16, 1, 0.1);
-    SOUTH_OPEN_LEFT = Block.box(-15, 0, -2.9, 1, 16, 0.1);
-    SOUTH_OPEN_RIGHT = Block.box(15, 0, -2.9, 31, 16, 0.1);
-    SOUTH_CLOSED = Block.box(0, 0, 0, 16, 16, 3);
+        SOUTH_OPEN_UP = Block.box(0, 15, -2.9, 16, 31, 0.1);
+        SOUTH_OPEN_DOWN = Block.box(0, -15, -2.9, 16, 1, 0.1);
+        SOUTH_OPEN_LEFT = Block.box(-15, 0, -2.9, 1, 16, 0.1);
+        SOUTH_OPEN_RIGHT = Block.box(15, 0, -2.9, 31, 16, 0.1);
+        SOUTH_CLOSED = Block.box(0, 0, 0, 16, 16, 3);
 
-    EAST_OPEN_UP = Block.box(-2.9, 15, 0, 0.1, 31, 16);
-    EAST_OPEN_DOWN = Block.box(-2.9, -15, 0, 0.1, 1, 16);
-    EAST_OPEN_LEFT = Block.box(-2.9, 0, 15, 0.1, 16, 31);
-    EAST_OPEN_RIGHT = Block.box(-2.9, 0, -15, 0.1, 16, 1);
-    EAST_CLOSED = Block.box(0, 0, 0, 3, 16, 16);
+        EAST_OPEN_UP = Block.box(-2.9, 15, 0, 0.1, 31, 16);
+        EAST_OPEN_DOWN = Block.box(-2.9, -15, 0, 0.1, 1, 16);
+        EAST_OPEN_LEFT = Block.box(-2.9, 0, 15, 0.1, 16, 31);
+        EAST_OPEN_RIGHT = Block.box(-2.9, 0, -15, 0.1, 16, 1);
+        EAST_CLOSED = Block.box(0, 0, 0, 3, 16, 16);
 
-    WEST_OPEN_UP = Block.box(15.9, 15, 0, 18.9, 31, 16);
-    WEST_OPEN_DOWN = Block.box(15.9, -15, 0, 18.9, 1, 16);
-    WEST_OPEN_LEFT = Block.box(15.9, 0, -15, 18.9, 16, 1);
-    WEST_OPEN_RIGHT = Block.box(15.9, 0, 15, 18.9, 16, 31);
-    WEST_CLOSED = Block.box(13, 0, 0, 16, 16, 16);
-}
+        WEST_OPEN_UP = Block.box(15.9, 15, 0, 18.9, 31, 16);
+        WEST_OPEN_DOWN = Block.box(15.9, -15, 0, 18.9, 1, 16);
+        WEST_OPEN_LEFT = Block.box(15.9, 0, -15, 18.9, 16, 1);
+        WEST_OPEN_RIGHT = Block.box(15.9, 0, 15, 18.9, 16, 31);
+        WEST_CLOSED = Block.box(13, 0, 0, 16, 16, 16);
+    }
 
     @Nullable
     @Override

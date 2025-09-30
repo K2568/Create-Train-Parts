@@ -1,11 +1,20 @@
 package com.tiestoettoet.create_train_parts;
 
 import com.simibubi.create.AllCreativeModeTabs;
+import com.simibubi.create.AllTags;
+import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.data.SharedProperties;
+import com.tiestoettoet.create_train_parts.content.contraptions.behaviour.StepMovingInteraction;
+import com.tiestoettoet.create_train_parts.content.decoration.encasing.EncasedCTBehaviour;
 import com.tiestoettoet.create_train_parts.content.decoration.slidingWindow.SlidingWindowBlock;
 import com.tiestoettoet.create_train_parts.content.decoration.trainSlide.TrainSlideBlock;
 import com.tiestoettoet.create_train_parts.content.decoration.trainStep.TrainStepBlock;
+import com.tiestoettoet.create_train_parts.content.decoration.trainStep.TrainStepGenerator;
+import com.tiestoettoet.create_train_parts.content.decoration.trainStep.TrainStepMovementBehaviour;
+import com.tiestoettoet.create_train_parts.content.foundation.block.connected.HorizontalCTBehaviour;
 import com.tiestoettoet.create_train_parts.content.foundation.data.BuilderTransformers;
+import com.tiestoettoet.create_train_parts.content.trains.bellow.BellowBlock;
 import com.tiestoettoet.create_train_parts.content.trains.crossing.ArmExtenderBlock;
 import com.tiestoettoet.create_train_parts.content.trains.crossing.CrossingBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;
@@ -14,7 +23,12 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 import com.simibubi.create.AllCreativeModeTabs;
 
+import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
+import static com.simibubi.create.api.behaviour.movement.MovementBehaviour.movementBehaviour;
+import static com.simibubi.create.foundation.data.CreateRegistrate.casingConnectivity;
+import static com.simibubi.create.foundation.data.CreateRegistrate.connectedTextures;
 import static com.simibubi.create.foundation.data.ModelGen.customItemModel;
+import static com.simibubi.create.foundation.data.TagGen.axeOnly;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 
 public class AllBlocks {
@@ -115,26 +129,13 @@ public class AllBlocks {
             .transform(BuilderTransformers.armExtender())
             .register();
 
-//
-//    public static final BlockEntry<TrainStepBlock> TRAIN_STEP_BRASS = REGISTRATE.block("train_step_brass", TrainStepBlock::new)
-//            .transform(BuilderTransformers.trainStep("brass", () -> AllSpriteShifts.TRAIN_STEP_BRASS))
-//            .properties(p -> p.mapColor(MapColor.TERRACOTTA_BROWN))
-//            .lang("Brass Step")
-//            .register();
-//
-//    public static final BlockEntry<TrainStepBlock> TRAIN_STEP_COPPER = REGISTRATE.block("train_step_copper", TrainStepBlock::new)
-//            .transform(BuilderTransformers.trainStep("copper", () -> AllSpriteShifts.TRAIN_STEP_COPPER))
-//            .properties(p -> p.mapColor(MapColor.TERRACOTTA_LIGHT_GRAY))
-//            .lang("Copper Step")
-//            .register();
-
-//    public static final BlockEntry<TrainStepBlock> TRAIN_STEP_TRAIN = REGISTRATE.block("train_step_train", TrainStepBlock::new)
-//            .transform(BuilderTransformers.trainStep("train", () -> AllSpriteShifts.TRAIN_STEP_SIDE,
-//                    () -> AllSpriteShifts.TRAIN_STEP_TRAIN))
-//            .properties(p -> p.mapColor(MapColor.TERRACOTTA_CYAN)
-//                    .sound(SoundType.NETHERITE_BLOCK))
-//            .lang("Train Step")
-//            .register();
+    public static final BlockEntry<BellowBlock> BELLOW = REGISTRATE.block("bellow", BellowBlock::new)
+            .properties(p -> p.mapColor(MapColor.COLOR_BLACK)
+                    .sound(SoundType.WOOL))
+            .item()
+            .model(AssetLookup.customBlockItemModel("bellow", "item"))
+            .build()
+            .register();
 
 
     public static void register() {

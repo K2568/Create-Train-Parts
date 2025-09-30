@@ -46,6 +46,12 @@ public class AllBlockEntityTypes {
 //                    .renderer(() -> ArmExtenderRenderer::new)
 //                    .register();
 
+//    public static final BlockEntityEntry<BellowBlockEntity> BELLOW =
+//        REGISTRATE.blockEntity("bellow", BellowBlockEntity::new)
+//            .validBlocks(AllBlocks.BELLOW)
+//            .renderer(() -> BellowRenderer::new)
+//            .register();
+
     public static void register() {
 
     }

@@ -1,0 +1,55 @@
+{
+	"render_type": "minecraft:cutout_mipped",
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "create:block/track/bogey/textures",
+	"textures": {
+		"0": "create:block/bogey/wheel"
+	},
+	"elements": [
+		{
+			"from": [-8, -3.5, -2],
+			"to": [8, 28.5, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -2, 0]},
+			"faces": {
+				"east": {"uv": [0, 10, 2, 12], "texture": "#0"},
+				"west": {"uv": [0, 10, 2, 12], "texture": "#0"},
+				"up": {"uv": [0, 10, 2, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 10, 2, 12], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [-8, -3.5, 2],
+			"to": [8, 28.5, -2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -2, 0]},
+			"faces": {
+				"east": {"uv": [0, 10, 2, 12], "texture": "#0"},
+				"west": {"uv": [0, 10, 2, 12], "texture": "#0"},
+				"up": {"uv": [0, 10, 2, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 10, 2, 12], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [-8.5, -4, -1],
+			"to": [8.5, 29, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -2, 0]},
+			"faces": {
+				"east": {"uv": [2, 10, 3, 12], "texture": "#0"},
+				"west": {"uv": [2, 10, 3, 12], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [2, 10, 3, 12], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [2, 10, 3, 12], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [-8.5, -4, 1],
+			"to": [8.5, 29, -1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -2, 0]},
+			"faces": {
+				"east": {"uv": [2, 10, 3, 12], "texture": "#0"},
+				"west": {"uv": [2, 10, 3, 12], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [2, 10, 3, 12], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [2, 10, 3, 12], "rotation": 90, "texture": "#0"}
+			}
+		}
+	]
+}

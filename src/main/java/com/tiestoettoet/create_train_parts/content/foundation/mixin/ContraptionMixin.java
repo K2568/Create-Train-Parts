@@ -14,6 +14,7 @@ import com.simibubi.create.foundation.utility.BlockHelper;
 import com.tiestoettoet.create_train_parts.content.decoration.slidingWindow.SlidingWindowBlock;
 import com.tiestoettoet.create_train_parts.content.decoration.trainSlide.TrainSlideBlock;
 import com.tiestoettoet.create_train_parts.content.decoration.trainStep.TrainStepBlock;
+import com.tiestoettoet.create_train_parts.content.trains.bellow.BellowBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
@@ -48,6 +49,7 @@ public abstract class ContraptionMixin {
 
         return nbt;
     }
+
     @Overwrite
     protected Pair<StructureTemplate.StructureBlockInfo, BlockEntity> capture(Level world, BlockPos pos) {
         BlockState blockstate = world.getBlockState(pos);
@@ -55,7 +57,8 @@ public abstract class ContraptionMixin {
             blockstate = blockstate.setValue(RedstoneContactBlock.POWERED, true);
         if (AllBlocks.POWERED_SHAFT.has(blockstate))
             blockstate = BlockHelper.copyProperties(blockstate, AllBlocks.SHAFT.getDefaultState());
-        if (blockstate.getBlock() instanceof ControlsBlock && AllTags.AllContraptionTypeTags.OPENS_CONTROLS.matches(this.getType()))
+        if (blockstate.getBlock() instanceof ControlsBlock
+                && AllTags.AllContraptionTypeTags.OPENS_CONTROLS.matches(this.getType()))
             blockstate = blockstate.setValue(ControlsBlock.OPEN, true);
         if (blockstate.hasProperty(SlidingDoorBlock.VISIBLE))
             blockstate = blockstate.setValue(SlidingDoorBlock.VISIBLE, false);
@@ -82,6 +85,5 @@ public abstract class ContraptionMixin {
 
         return Pair.of(new StructureTemplate.StructureBlockInfo(pos, blockstate, compoundnbt), blockEntity);
     }
-
 
 }
